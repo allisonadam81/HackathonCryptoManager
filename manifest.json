@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+  "name": "Crypto Manager",
+  "version": "2.0",
+  "descritpion": "Rick Rolls users on every website they try to go to.",
+  "content_scripts": [
+    {
+      "matches": ["https://*/*"],
+      "exclude_globs": ["https://www.youtube.com/watch?v=dQw4w9WgXcQ"],
+      "js": ["./main.js"]
+    },
+    {
+      "matches": ["https://www.youtube.com/watch?v=dQw4w9WgXcQ"],
+      "js": ["./button.js"],
+      "css": ["./style.css"]
+    }
+  ]
+}
